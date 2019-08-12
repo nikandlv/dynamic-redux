@@ -1,7 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import ReduxProvider from './Data/ReduxProvider'
 import Store from './Data/Store'
 import CounterReducer from './Data/Reducers/CounterReducer';
 import { increaseBy, decreaseBy } from './Data/Actions/CounterActions'
