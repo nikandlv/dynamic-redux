@@ -13,11 +13,9 @@ class Application extends React.Component {
       <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
         {this.props.counter}
           <br/>
+          <div className="button-group">
           <button onClick={() => {
             this.props.increaseBy(1)
           }}>
@@ -28,6 +26,7 @@ class Application extends React.Component {
           }}>
             decrease
           </button>
+          </div>
       </header>
     </div>
     )

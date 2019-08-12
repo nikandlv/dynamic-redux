@@ -31,3 +31,17 @@
     transform: rotate(360deg);
   }
 }
+.button-group {
+  display: flex
+}
+
+button{
+  padding: 1rem;
+  background: #424242;
+  border: unset;
+  outline: unset;
+  border-radius: 50rem;
+  color: white;
+  display: inline-block;
+  margin: 1rem
+}
