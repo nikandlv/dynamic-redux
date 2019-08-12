@@ -11,6 +11,11 @@ export default function CounterReducer(state = initialState,action) {
                 ...state,
                 counter: state.counter + action.payload
             }
+        case types.DECREASE_BY:
+            return {
+                ...state,
+                counter: state.counter - action.payload
+            }
         default:
             return state;
     }

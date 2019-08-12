@@ -4,7 +4,7 @@ import './App.css';
 import ReduxProvider from './Data/ReduxProvider'
 import Store from './Data/Store'
 import CounterReducer from './Data/Reducers/CounterReducer';
-import { increaseBy } from './Data/Actions/CounterActions'
+import { increaseBy, decreaseBy } from './Data/Actions/CounterActions'
 import { connect } from 'react-redux'
 Store.injectReducer('CounterReducer',CounterReducer)
 
@@ -24,6 +24,11 @@ class Application extends React.Component {
           }}>
             increase
           </button>
+          <button onClick={() => {
+            this.props.decreaseBy(1)
+          }}>
+            decrease
+          </button>
       </header>
     </div>
     )
@@ -35,7 +40,8 @@ const mapStateToProps = state => ({
 })
 
 const actions = {
-  increaseBy
+  increaseBy,
+  decreaseBy
 }
 
 const ApplicationWithRedux = connect(mapStateToProps, actions)(Application)

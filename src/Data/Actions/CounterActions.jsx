@@ -6,3 +6,11 @@ export const increaseBy = (number) => (dispatch) => {
         payload: number
     })
 }
+
+
+export const decreaseBy = (number) => (dispatch) => {
+    dispatch({
+        type:types.DECREASE_BY,
+        payload: number
+    })
+}
