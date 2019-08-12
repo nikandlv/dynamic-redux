@@ -1,28 +1,47 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import ReduxProvider from './Data/ReduxProvider'
-function App() {
-  return (
-    <ReduxProvider>
-    <div className="App">
+import Store from './Data/Store'
+import CounterReducer from './Data/Reducers/CounterReducer';
+import { increaseBy, decreaseBy } from './Data/Actions/CounterActions'
+import { connect } from 'react-redux'
+Store.injectReducer('CounterReducer',CounterReducer)
+
+class Application extends React.Component {
+  render() {
+    return (
+      <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {this.props.counter}
+          <br/>
+          <button onClick={() => {
+            this.props.increaseBy(1)
+          }}>
+            increase
+          </button>
+          <button onClick={() => {
+            this.props.decreaseBy(1)
+          }}>
+            decrease
+          </button>
       </header>
     </div>
-    </ReduxProvider>
-  );
+    )
+  }
 }
 
-export default App;
+const mapStateToProps = state => ({ 
+    ...state.CounterReducer
+})
+
+const actions = {
+  increaseBy,
+  decreaseBy
+}
+
+export default connect(mapStateToProps, actions)(Application)
+
