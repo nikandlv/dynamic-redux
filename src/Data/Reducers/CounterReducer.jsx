@@ -4,7 +4,7 @@ const initialState = {
     counter: 0
 }
 
-export default function ModuleReducer(state = initialState,action) {
+export default function CounterReducer(state = initialState,action) {
     switch(action.type) {
         case types.INCREASE_BY:
             return {
