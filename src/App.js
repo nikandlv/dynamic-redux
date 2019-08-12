@@ -44,12 +44,5 @@ const actions = {
   decreaseBy
 }
 
-const ApplicationWithRedux = connect(mapStateToProps, actions)(Application)
+export default connect(mapStateToProps, actions)(Application)
 
-export default function Wrapper() {
-  return (
-    <ReduxProvider>
-      <ApplicationWithRedux />
-    </ReduxProvider>
-  );
-}
