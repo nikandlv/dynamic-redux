@@ -5,6 +5,7 @@ import Store from './Data/Store'
 import CounterReducer from './Data/Reducers/CounterReducer';
 import { increaseBy, decreaseBy } from './Data/Actions/CounterActions'
 import { connect } from 'react-redux'
+import use from './Data/use';
 Store.injectReducer('CounterReducer',CounterReducer)
 
 class Application extends React.Component {
@@ -33,14 +34,7 @@ class Application extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({ 
-    ...state.CounterReducer
-})
-
-const actions = {
-  increaseBy,
-  decreaseBy
-}
-
-export default connect(mapStateToProps, actions)(Application)
-
+export default use(Application)
+                .addAction(increaseBy,decreaseBy)
+                .addReducer('CounterReducer')
+                .build()
