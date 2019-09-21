@@ -26,7 +26,7 @@ const builder = {
     }
 }
 
-export default function use(input) {
+export default function withDynamic(input) {
     component = input
     return builder
 }

@@ -5,7 +5,7 @@ import Store from './Data/Store'
 import CounterReducer from './Data/Reducers/CounterReducer';
 import { increaseBy, decreaseBy } from './Data/Actions/CounterActions'
 import { connect } from 'react-redux'
-import use from './Data/use';
+import withDynamic from './Data/withDynamic';
 Store.injectReducer('CounterReducer',CounterReducer)
 
 class Application extends React.Component {
@@ -34,7 +34,7 @@ class Application extends React.Component {
   }
 }
 
-export default use(Application)
+export default withDynamic(Application)
                 .addAction(increaseBy,decreaseBy)
                 .addReducer('CounterReducer')
                 .build()
