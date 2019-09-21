@@ -1,6 +1,6 @@
-# Dynamic redux boilerplate
+# Dynamic redux
 
-> With dynamic redux boilerplate you can inject your reducers on the fly
+> With dynamic redux you can inject your reducers on the fly
 
 ## Installation
 
