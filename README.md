@@ -57,7 +57,7 @@ export default withDynamic(MyComponent)
                 .addAction(increaseBy, decreaseBy)
                 .addReducer('CounterReducer', 'xyz')
                 .build()
-``
+```
 
 there are 2 main functions
 
