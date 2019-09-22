@@ -47,3 +47,5 @@ Store.injectReducer('CounterReducer',CounterReducer)
 `injectReducer` takes two parameters a `key` and the `reducer`
 
 #### Use `with` builder
+
+using `with` builder you can easily access your `reducers` and `actions` in your component
