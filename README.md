@@ -58,3 +58,8 @@ export default withDynamic(MyComponent)
                 .addReducer('CounterReducer', 'xyz')
                 .build()
 ``
+
+there are 2 main functions
+
+`addAction` which takes any amount of parameters adds the actions to your component
+
