@@ -51,5 +51,7 @@ Store.injectReducer('CounterReducer',CounterReducer)
 using `withDynamic` builder you can easily access your `reducers` and `actions` in your components
 
 ```javascript
+import withDynamic from './Data/withDynamic';
+
 
 ``
