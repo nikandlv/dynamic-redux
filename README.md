@@ -48,4 +48,8 @@ Store.injectReducer('CounterReducer',CounterReducer)
 
 #### Use `with` builder
 
-using `with` builder you can easily access your `reducers` and `actions` in your component
+using `with` builder you can easily access your `reducers` and `actions` in your components
+
+```javascript
+
+``
