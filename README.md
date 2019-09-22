@@ -53,5 +53,8 @@ using `withDynamic` builder you can easily access your `reducers` and `actions` 
 ```javascript
 import withDynamic from './Data/withDynamic';
 
-
+export default withDynamic(MyComponent)
+                .addAction(increaseBy, decreaseBy)
+                .addReducer('CounterReducer', 'xyz')
+                .build()
 ``
