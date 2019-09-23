@@ -8,20 +8,26 @@ let action_list = []
 let component = null
 
 const builder = {
-    addAction = (...actions) => {
-        action_list = [...action_list,...actions]
+    injectAction: (key,action) => {
+        action_list[key] = action
         return builder
     },
-    addReducer = (reducers) => {
-        reducer_list = [...reducer_list,...reducers]
+    injectReducer: (reducer) => {
+        reducer_list = [...reducer_list,reducer]
         return builder
     },
-    build = () => {
+    build: () => {
         if(component === null) {
-            throw('Component should not be null')
+            console.error('Component should not be null')
         }
-        return connect((state) => {
-            return state.filter((element, key) => reducer_list.includes(key) )
+        return connect(() => (state) => {
+            let result = {}
+            Object.keys(state).map((key) => {
+                if(reducer_list.includes(key)) {
+                    result[key] = (state[key])
+                }
+            })
+            return result
         },action_list)(component)
     }
 }
