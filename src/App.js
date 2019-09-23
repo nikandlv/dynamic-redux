@@ -35,6 +35,7 @@ class Application extends React.Component {
 }
 
 export default withDynamic(Application)
-                .addAction(increaseBy,decreaseBy)
-                .addReducer('CounterReducer')
+                .injectAction('increaseBy',increaseBy)
+                .injectAction('decreaseBy',decreaseBy)
+                .injectReducer('CounterReducer')
                 .build()
