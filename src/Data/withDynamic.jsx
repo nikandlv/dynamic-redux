@@ -8,12 +8,12 @@ let action_list = []
 let component = null
 
 const builder = {
-    addAction: (...actions) => {
-        action_list = [...action_list,...actions]
+    injectAction: (key,action) => {
+        action_list[key] = action
         return builder
     },
-    addReducer: (reducers) => {
-        reducer_list = [...reducer_list,...reducers]
+    injectReducer: (reducer) => {
+        reducer_list = [...reducer_list,reducer]
         return builder
     },
     build: () => {
