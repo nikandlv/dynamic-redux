@@ -21,7 +21,7 @@ const builder = {
             console.error('Component should not be null')
         }
         return connect((state) => {
-            return state.filter((element, key) => reducer_list.includes(key) )
+            return Object.keys(state).filter((key) => reducer_list.includes(key) )
         },action_list)(component)
     }
 }
