@@ -8,15 +8,15 @@ let action_list = []
 let component = null
 
 const builder = {
-    addAction = (...actions) => {
+    addAction: (...actions) => {
         action_list = [...action_list,...actions]
         return builder
     },
-    addReducer = (reducers) => {
+    addReducer: (reducers) => {
         reducer_list = [...reducer_list,...reducers]
         return builder
     },
-    build = () => {
+    build: () => {
         if(component === null) {
             throw('Component should not be null')
         }
