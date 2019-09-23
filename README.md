@@ -54,13 +54,13 @@ using `withDynamic` builder you can easily access your `reducers` and `actions` 
 import withDynamic from './Data/withDynamic';
 
 export default withDynamic(MyComponent)
-                .addAction(increaseBy, decreaseBy)
-                .addReducer('CounterReducer', 'xyz')
+                .injectAction('name', func)
+                .injectReducer('CounterReducer')
                 .build()
 ```
 
 there are 2 main functions
 
-`addAction` which takes any amount of parameters and then adds the actions to your component
+`injectAction` which takes function name and the action and injects it into your component props
 
-`addReducer` which also takes any amount of parameters and adds the reducers to your component
+`injectReducer` which takes a reducer name and injcets it into your component props

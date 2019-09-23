@@ -9,12 +9,12 @@ Store.injectReducer('CounterReducer',CounterReducer)
 
 class Application extends React.Component {
   render() {
-    console.log(this.props)
+    let counter = this.props.CounterReducer.counter
     return (
       <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        {this.props.counter}
+          {counter}
           <br/>
           <div className="button-group">
           <button onClick={() => {
