@@ -18,7 +18,7 @@ const builder = {
     },
     build: () => {
         if(component === null) {
-            throw('Component should not be null')
+            console.error('Component should not be null')
         }
         return connect((state) => {
             return state.filter((element, key) => reducer_list.includes(key) )
