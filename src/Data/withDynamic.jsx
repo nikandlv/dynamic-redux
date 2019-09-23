@@ -20,8 +20,14 @@ const builder = {
         if(component === null) {
             console.error('Component should not be null')
         }
-        return connect((state) => {
-            return Object.keys(state).filter((key) => reducer_list.includes(key) )
+        return connect(() => (state) => {
+            let result = {}
+            Object.keys(state).map((key) => {
+                if(reducer_list.includes(key)) {
+                    result[key] = (state[key])
+                }
+            })
+            return result
         },action_list)(component)
     }
 }
