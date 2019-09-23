@@ -9,7 +9,7 @@ Store.injectReducer('CounterReducer',CounterReducer)
 
 class Application extends React.Component {
   render() {
-    console.log(this.props)
+    let counter = this.props.CounterReducer.counter
     return (
       <div className="App">
       <header className="App-header">
