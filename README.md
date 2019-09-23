@@ -61,6 +61,6 @@ export default withDynamic(MyComponent)
 
 there are 2 main functions
 
-`injectAction` which takes any amount of parameters and then adds the actions to your component
+`injectAction` which takes function name and the action and injects it into your component props
 
-`injectReducer` which also takes any amount of parameters and adds the reducers to your component
+`injectReducer` which takes a reducer name and injcets it into your component props
