@@ -1,4 +1,3 @@
-import Store from './Store';
 import {connect} from 'react-redux'
 
 let reducer_list = []
