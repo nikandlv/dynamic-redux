@@ -1,11 +1,20 @@
 {
   "name": "dynamic-redux",
   "version": "0.1.0",
+  "description": "With dynamic redux you can inject your reducers on the fly",
+  "license": "MIT",
+  "repository": "https://github.com/nikandlv/dynamic-redux",
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-redux": "^7.1.0",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0"
-  }
+  },
+  "keywords": [
+    "react",
+    "react-redux",
+    "redux",
+    "dynamic-redux"
+  ]
 }
