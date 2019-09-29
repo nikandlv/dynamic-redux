@@ -1,5 +1,5 @@
 {
-  "name": "dynamic-redux-boilerplate",
+  "name": "dynamic-redux",
   "version": "0.1.0",
   "dependencies": {
     "react": "^16.9.0",
