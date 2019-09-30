@@ -2,17 +2,16 @@
 
 > With dynamic redux you can inject your reducers on the fly
 
-## Installation
+## Install Requirements
 
 ```console
 
 nikandlv@nikandlv.ir:~$ npm install redux react-redux redux-thunk
 
 ```
-
-Then simply copy `Data` folder into your project
-
 ## Setup
+
+Then simply copy `src` folder into your project where you want
 
 ### Import it
 
