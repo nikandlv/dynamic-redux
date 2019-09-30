@@ -59,8 +59,10 @@ export default withDynamic(MyComponent)
                 .build()
 ```
 
-there are 2 main functions
+there are 3 main functions
 
 `injectAction` which takes function name and the action and injects it into your component props
 
 `injectReducer` which takes a reducer name and injcets it into your component props
+
+`build` and at last build function which finalized the builder
