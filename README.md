@@ -21,7 +21,7 @@ import ReduxProvider from './ReduxProvider'
 
 ### Wrap your root component or any base component
 
-```javascript
+```jsx
 ReactDOM.render(
     <ReduxProvider>
         <Application />
@@ -50,8 +50,16 @@ Store.injectReducer('CounterReducer',CounterReducer)
 
 using `withDynamic` builder you can easily access your `reducers` and `actions` in your components
 
-```javascript
+```jsx
 import withDynamic from './withDynamic';
+
+function MyComponent() {
+    return (
+        <div>
+            <legend>Hello there!</legend>
+        </div>
+    )
+}
 
 export default withDynamic(MyComponent)
                 .injectAction('name', func)
