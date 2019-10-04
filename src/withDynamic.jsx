@@ -19,15 +19,21 @@ const builder = {
         if(component === null) {
             console.error('Component should not be null')
         }
+        let reducers = reducer_list
+        let actions = action_list
+        let cmp = component
+        reducer_list = []
+        action_list = []
+        component = null
         return connect(() => (state) => {
             let result = {}
             Object.keys(state).map((key) => {
-                if(reducer_list.includes(key)) {
+                if(reducers.includes(key)) {
                     result[key] = (state[key])
                 }
             })
             return result
-        },action_list)(component)
+        },actions)(cmp)
     }
 }
 
