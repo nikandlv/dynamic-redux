@@ -1,6 +1,6 @@
 import React from 'react'
 import { Provider } from 'react-redux'
-import Store from './Store';
+import Store from './Store.jsx';
 
 export default class ReduxProvider extends React.Component {
     render() {

@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import thunk from 'redux-thunk'
-import DefaultReducer from './Reducers/DefaultReducer'
+import DefaultReducer from './Reducers/DefaultReducer.jsx'
 
 const defaultReducers = {
     DefaultReducer
